@@ -30,7 +30,7 @@ jobs:
 
       - name: Extract version from build.gradle
         id: extract_version
-        run: echo "::set-output name=version::$(grep -oP 'version \K[^\"']+' build.gradle)"
+        run: echo "::set-output name=version::$(grep -oP 'version \"\K[^\"]+' build.gradle)"
 
       - name: Create Release
         id: create_release
