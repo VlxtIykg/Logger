@@ -30,7 +30,8 @@ jobs:
 
       - name: Extract version from pom.xml
         id: extract_version
-        run: echo ::set-output name=version::$(xmllint --xpath "//*[local-name()='project']/*[local-name()='version']/text()" pom.xml)
+        run: |
+          echo "::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)"
 
       - name: Create Release
         id: create_release
