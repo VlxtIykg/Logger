@@ -41,3 +41,5 @@ setting.json
 gradle.properties
 settings.gradle
 target
+releases.json
+test.sh
