@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/golemmod.api.iml" filepath="$PROJECT_DIR$/.idea/modules/golemmod.api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/golemmod.main.iml" filepath="$PROJECT_DIR$/.idea/modules/golemmod.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/golemmod.test.iml" filepath="$PROJECT_DIR$/.idea/modules/golemmod.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logger.api.iml" filepath="$PROJECT_DIR$/.idea/modules/logger.api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/logger.main.iml" filepath="$PROJECT_DIR$/.idea/modules/logger.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/logger.test.iml" filepath="$PROJECT_DIR$/.idea/modules/logger.test.iml" />
     </modules>

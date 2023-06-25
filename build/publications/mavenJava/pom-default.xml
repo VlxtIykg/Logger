@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>build.lib</groupId>
+  <artifactId>logger</artifactId>
+  <version>2.0.8</version>
+  <dependencies>
+    <dependency>
+      <groupId>gg.essential</groupId>
+      <artifactId>essential-1.8.9-forge</artifactId>
+      <version>1498</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.javacord</groupId>
+      <artifactId>javacord</artifactId>
+      <version>3.8.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.websocket</groupId>
+      <artifactId>javax.websocket-api</artifactId>
+      <version>1.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.java-websocket</groupId>
+      <artifactId>Java-WebSocket</artifactId>
+      <version>1.5.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>gg.essential</groupId>
+      <artifactId>loader-launchwrapper</artifactId>
+      <version>1.1.1</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>

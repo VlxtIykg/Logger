@@ -2,9 +2,10 @@ package logger;
 
 import java.io.PrintStream;
 
+import static logger.LogColor.*;
+
 public class Logger {
 	private static final PrintStream output;
-	private static final LogColor lc = new LogColor();
 
 	private static void render(PrintStream out, Object message) {
 		if (message.getClass().isArray()) {
@@ -18,22 +19,22 @@ public class Logger {
 				}
 			}
 
-			out.print("]" + lc.ANSI_RESET);
+			out.print("]" + ANSI_RESET);
 		} else {
-			out.print(message + lc.ANSI_RESET);
+			out.print(message + ANSI_RESET);
 		}
 	}
 
 	// if using log() depth is 2, if using any other function depth is 3 or more.
 	public static void log(Logger.Level level, int depth, Object... messages) {
-		String color = lc.ANSI_WHITE;
-		if (level == Level.TRACE) color = lc.ANSI_LIGHT_RED;
-		else if (level == Level.INFO) color = lc.ANSI_WHITE;
-		else if (level == Level.DEBUG) color = lc.ANSI_CYAN;
-		else if (level == Level.WARN) color = lc.ANSI_YELLOW;
-		else if (level == Level.ERROR) color = lc.ANSI_RED;
+		String color = ANSI_WHITE;
+		if (level == Level.TRACE) color = ANSI_LIGHT_RED;
+		else if (level == Level.INFO) color = ANSI_WHITE;
+		else if (level == Level.DEBUG) color = ANSI_CYAN;
+		else if (level == Level.WARN) color = ANSI_YELLOW;
+		else if (level == Level.ERROR) color = ANSI_RED;
 		synchronized (output) {
-			output.format(lc.ANSI_RESET + color + "[" + getClassName(depth) + " | %s] ", level);
+			output.format(ANSI_RESET + color + "[" + getClassName(depth) + " | %s] ", level);
 			for (int i = 0; i < messages.length; ++i) {
 				if (i + 1 == messages.length && messages[i] instanceof Throwable) {
 					output.println();
@@ -69,7 +70,11 @@ public class Logger {
 	}
 
 	private static String getClassName(final int depth) {
-		return new Throwable().getStackTrace()[depth].getClassName().replace("com.golem.golemstonks.", "");
+		// Extract the package name
+		String className = new Throwable().getStackTrace()[depth].getClassName();
+		int start = className.indexOf('[') + 1; // Start index of the package name
+		int end = className.lastIndexOf('.'); // End index of the package name
+		return className.substring(end + 1);
 	}
 
 	static {

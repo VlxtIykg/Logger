@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
 TweakOrder: 0
-MixinConfigs: mixins.logger.json
 ModSide: CLIENT
 FMLCorePluginContainsFMLMod: true
 TweakClass: gg.essential.loader.stage0.EssentialSetupTweaker

@@ -1,0 +1,96 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "build.lib",
+    "module": "logger",
+    "version": "2.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.3",
+      "buildId": "2pvdv242y5c3jjtdavfjkdj5h4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      }
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "gg.essential",
+          "module": "essential-1.8.9-forge",
+          "version": {
+            "requires": "1498"
+          }
+        },
+        {
+          "group": "org.javacord",
+          "module": "javacord",
+          "version": {
+            "requires": "3.8.0"
+          }
+        },
+        {
+          "group": "javax.websocket",
+          "module": "javax.websocket-api",
+          "version": {
+            "requires": "1.1"
+          }
+        },
+        {
+          "group": "org.java-websocket",
+          "module": "Java-WebSocket",
+          "version": {
+            "requires": "1.5.1"
+          }
+        },
+        {
+          "group": "gg.essential",
+          "module": "loader-launchwrapper",
+          "version": {
+            "requires": "1.1.1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "logger-2.0.8-all.jar",
+          "url": "logger-2.0.8-all.jar",
+          "size": 238465,
+          "sha512": "6ede622a0aa5c006a7a1b650391011c43ff9c011a37b6afb16e96f78863e48f487859dbeb4e4df736db71747b315526dd8685cbdafa081207c43198bcc1ccb89",
+          "sha256": "198b9ff8a55655e19fe57f48f75571ef4c3c2e41c79abfc2e58db753595afcf2",
+          "sha1": "06b1058413058d3ce600f51e66a2c9e0677d79d2",
+          "md5": "8fc4e8f9a2dee23f0d97624c35a0a3b3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.VlxtIykg",
+    "module": "logger",
+    "version": "2.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.3",
+      "buildId": "eaf3hlmkmzetzpgywa6l7cbd5e"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "logger-2.0.8.jar",
+          "url": "logger-2.0.8.jar",
+          "size": 3509,
+          "sha512": "a3b6461c5d9e944c5991ae652c19db723cd70d1705c69a0b34232bc3fbc2beefb01424794ab81993ea3b1953cd8c05aaeb53fe682241fd6b6088c64507e59e9c",
+          "sha256": "3e8c95af3fb1fd88c22e03aabccd6c2a7ff90a4d1d01e380ee325ada0827e368",
+          "sha1": "09dab5106793b9929bfff547cd2e01754db2276d",
+          "md5": "29f1bbebd116e9d2cbdcf719fce09f6c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "logger-2.0.8.jar",
+          "url": "logger-2.0.8.jar",
+          "size": 3509,
+          "sha512": "a3b6461c5d9e944c5991ae652c19db723cd70d1705c69a0b34232bc3fbc2beefb01424794ab81993ea3b1953cd8c05aaeb53fe682241fd6b6088c64507e59e9c",
+          "sha256": "3e8c95af3fb1fd88c22e03aabccd6c2a7ff90a4d1d01e380ee325ada0827e368",
+          "sha1": "09dab5106793b9929bfff547cd2e01754db2276d",
+          "md5": "29f1bbebd116e9d2cbdcf719fce09f6c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "logger-2.0.8-sources.jar",
+          "url": "logger-2.0.8-sources.jar",
+          "size": 1718,
+          "sha512": "87e2ea4e8825e1f951b5f5558d68700211ea6fcdc57558f12795d78defae2f5cab2d585b91d834ce0b91fb148da3936f255fd10f053b9e5abf93fd5e0f6d9dae",
+          "sha256": "c4adadaa35de16724894f6ac0a7eb2365c4230715fee0df58705cc9745dbdc22",
+          "sha1": "a40a9f0b1a99de6c148c7b833a7092bdf2542859",
+          "md5": "7b181da70e31564b13f201315aea92b2"
+        }
+      ]
+    }
+  ]
+}
