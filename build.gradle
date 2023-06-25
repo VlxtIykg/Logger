@@ -2,6 +2,7 @@ plugins {
 	id "net.minecraftforge.gradle.forge" version "41dfce0a70"
 	id "com.github.johnrengelman.shadow" version "6.1.0"
 	id "org.spongepowered.mixin" version "0.6-SNAPSHOT"
+	id 'maven-publish'
 }
 
 version="2.0.6"
@@ -52,8 +53,7 @@ dependencies {
 	testImplementation 'junit:junit:4.13.2'
 
 	// Logger
-	implementation 'com.github.VlxtIykg:Logger:-SNAPSHOT'
-//	implementation 'com.kami.logger:logger:2.0.6'
+//	implementation 'com.github.VlxtIykg:Logger:2.0.7'
 }
 
 mixin {
@@ -77,6 +77,20 @@ jar {
 	)
 
 	enabled = false
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			groupId = "com.kami"
+			artifactId = "Logger"
+			version = "2.0.6"
+			from components.java
+		}
+	}
+	repositories {
+		mavenLocal()
+	}
 }
 
 shadowJar {
