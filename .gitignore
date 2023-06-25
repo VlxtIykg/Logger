@@ -1,21 +1,43 @@
-gradle.properties
-
-# gradle
-.gradle
-build
-repo
-
 # eclipse
+bin
+*.launch
 .settings
 .metadata
 .classpath
 .project
-bin
 
-# intellij
+# idea
 out
-*.idea
+*.ipr
+*.iws
 *.iml
+.idea
 
+# vscode
+.vscode
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+
+# Too big of files
+java_pid8500.hprof
+java_pid16928.hprof
+*hprof
+
+OUTPUT
+
+.DS_STORE
+
+golemRun/*
+
+*.log
+
+setting.json
+gradle.properties
 settings.gradle
 target

@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-TweakOrder: 0
-ModSide: CLIENT
-FMLCorePluginContainsFMLMod: true
-TweakClass: gg.essential.loader.stage0.EssentialSetupTweaker
-ForceLoadAsMod: true
-FMLCorePlugin: com.golem.logger.injection.FMLPlugin
-
