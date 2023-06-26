@@ -43,3 +43,5 @@ settings.gradle
 target
 releases.json
 test.sh
+*.sh
+*.py
