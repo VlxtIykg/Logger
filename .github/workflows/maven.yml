@@ -30,7 +30,7 @@ jobs:
 
       - name: Extract version from pom.xml
         id: extract_version
-        run: echo ::set-output name=version::$(xmllint --xpath "//*[local-name()='project']/*[local-name()='version']/text()" pom.xml)
+        run: echo "::set-output name=version::$(xmllint --xpath "//*[local-name()='project']/*[local-name()='version']/text()" pom.xml)"
 
       - name: Create Release
         id: create_release
@@ -38,7 +38,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         with:
-          tag_name: ${{ steps.extract_version.outputs.version }}
+          tag_name: v${{ steps.extract_version.outputs.version }}
           release_name: Release ${{ steps.extract_version.outputs.version }}
           draft: false
           prerelease: false
