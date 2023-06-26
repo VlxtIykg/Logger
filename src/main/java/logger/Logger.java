@@ -2,8 +2,6 @@ package logger;
 
 import java.io.PrintStream;
 
-import static logger.LogColor.*;
-
 public class Logger {
 	private static final PrintStream output;
 
@@ -19,22 +17,22 @@ public class Logger {
 				}
 			}
 
-			out.print("]" + ANSI_RESET);
+			out.print("]" + ANSIColor.RESET.getCode());
 		} else {
-			out.print(message + ANSI_RESET);
+			out.print(message + ANSIColor.RESET.getCode());
 		}
 	}
 
 	// if using log() depth is 2, if using any other function depth is 3 or more.
 	public static void log(Logger.Level level, int depth, Object... messages) {
-		String color = ANSI_WHITE;
-		if (level == Level.TRACE) color = ANSI_LIGHT_RED;
-		else if (level == Level.INFO) color = ANSI_WHITE;
-		else if (level == Level.DEBUG) color = ANSI_CYAN;
-		else if (level == Level.WARN) color = ANSI_YELLOW;
-		else if (level == Level.ERROR) color = ANSI_RED;
+		String color = ANSIColor.WHITE.getCode();
+		if (level == Level.TRACE) color = ANSIColor.LIGHT_RED.getCode();
+		else if (level == Level.INFO) color = ANSIColor.WHITE.getCode();
+		else if (level == Level.DEBUG) color = ANSIColor.CYAN.getCode();
+		else if (level == Level.WARN) color = ANSIColor.YELLOW.getCode();
+		else if (level == Level.ERROR) color = ANSIColor.RED.getCode();
 		synchronized (output) {
-			output.format(ANSI_RESET + color + "[" + getClassName(depth) + " | %s] ", level);
+			output.format(ANSIColor.RESET.getCode() + color + "[" + getClassName(depth) + " | %s] ", level);
 			for (int i = 0; i < messages.length; ++i) {
 				if (i + 1 == messages.length && messages[i] instanceof Throwable) {
 					output.println();
