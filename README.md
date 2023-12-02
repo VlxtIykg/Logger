@@ -1,4 +1,4 @@
-```
+```gradle
 implementation "com.github.VlxtIykg:Logger:1.1.0"
 ```
 
